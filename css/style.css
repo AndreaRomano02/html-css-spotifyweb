@@ -23,34 +23,88 @@ body{
 }
 
 img{
-  display: block;
+  display: inline-block;
 }
 
-i{
-  cursor: pointer;
+a{
+  text-decoration: none;
+  color: currentColor;
 }
+
 /* ****************************************** */
 
 /* ****************************************** */
 /*! Main-Navbar */
 .main-navbar{
-  position: relative;
-  flex: 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 50px;
   height: calc(100vh - 100px);
-  padding: 1rem;
   background-color: black;
+  padding: 10px;
 }
 
-.center-navbar{
-  overflow: auto;
+/*? Navbar Top */
+.small-logo{
+  margin-bottom: 10px;
+}
+
+.large-logo{
+  margin: 15px 0;
   display: none;
 }
 
-.bottom-navbar{
-  position: absolute;
-  bottom: 0;  
-  left: 0;
-  padding: 1rem;
+.navbar-logo .large-logo{
+  width: 140px;
+}
+
+.navbar-icon{
+  display: block;
+  padding: 5px 0;
+}
+
+.top-navbar img{
+  width: 30px;
+}
+
+/*? Playlist */
+.playlist{
+  overflow: auto;
+  margin: 20px 0;
+
+  display: none;
+}
+
+.add-playlist i{
+  margin: 10px 0;
+  margin-right: 10px;
+  background-color: #afafaf;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.name-playlist li{
+  margin: 15px 0;
+  font-size: 0.8rem;
+}
+
+.name-playlist li:hover{
+  text-decoration: underline;
+}
+
+/*? Navbar Bottom */
+.navbar-download > img{
+  height: 15px;
+  margin: 20px auto;
+}
+
+.navbar-account > img{
+  height: 25px;
+  width: 25px;
+  background-color: gray;
+  border-radius: 50%;
 }
 /* ****************************************** */
 
@@ -226,6 +280,15 @@ footer{
     display: block;
   }
 
+  .d-none-tablet{
+    display: none;
+  }
+
+  .home{
+    border-left: 3px solid #ADFF2F;
+    margin-left: -10px;
+    padding-left: 10px;
+  }
 }
 
 /* ****************************************** */
@@ -243,6 +306,10 @@ footer{
 
 .f-size-m{
   font-size: 1.2rem;
+}
+
+.f-size-sm{
+  font-size: 1rem;
 }
 
 .f-size-s{
