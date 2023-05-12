@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* ****************************************** */
 /*! General */
 body{
   font-family: 'Montserrat', sans-serif;
@@ -14,25 +15,38 @@ body{
 }
 
 .container{
-  padding: 0 1rem;
   margin: 0 auto;
 }
 
 .main-layout{
   display: flex;
 }
+/* ****************************************** */
 
+/* ****************************************** */
 /*! Main-Navbar */
 .main-navbar{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
   flex: 0 0 50px;
   height: calc(100vh - 100px);
-
+  padding: 1rem;
   background-color: black;
 }
 
+.center-navbar{
+  overflow: auto;
+  display: none;
+}
+
+.bottom-navbar{
+  position: absolute;
+  bottom: 0;  
+  left: 0;
+  padding: 1rem;
+}
+/* ****************************************** */
+
+/* ****************************************** */
 /*! Main */
 main{
   background-color: #141922;
@@ -40,8 +54,10 @@ main{
 
 .main-content{
   padding: 1rem;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 200px);
   overflow: auto;
+
+  text-align: justify;
 }
 
 /** Header */
@@ -56,8 +72,13 @@ header{
   line-height: 100px;
 }
 
+/* ****************************************** */
+
+/* ****************************************** */
 /*! Footer */
 footer{
+  display: flex;
+
   height: 100px;
   background-color: #282828;
 
@@ -66,3 +87,31 @@ footer{
   left: 0;
   z-index: 1;
 }
+
+.foot.left,
+.foot.right{
+  width: 30%;
+}
+
+.foot.center{
+  flex-grow: 1;
+}
+
+/* ****************************************** */
+
+/* ****************************************** */
+/*! RESPONSIVE */
+@media screen and (min-width: 768px) {
+  /** Main Navbar */
+  .main-navbar{
+    flex: 0 0 200px;
+  }
+
+  /** Main Navbar */
+  .d-block-tablet{
+    display: block;
+  }
+
+}
+
+/* ****************************************** */
