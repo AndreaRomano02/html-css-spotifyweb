@@ -1,0 +1,17 @@
+/*! CSS Reset */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*! General */
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
