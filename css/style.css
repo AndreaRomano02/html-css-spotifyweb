@@ -8,6 +8,9 @@
 /*! General */
 body{
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+  color: white;
+  padding-bottom: 100px;
 }
 
 .container{
@@ -15,3 +18,51 @@ body{
   margin: 0 auto;
 }
 
+.main-layout{
+  display: flex;
+}
+
+/*! Main-Navbar */
+.main-navbar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 50px;
+  height: calc(100vh - 100px);
+
+  background-color: black;
+}
+
+/*! Main */
+main{
+  background-color: #141922;
+}
+
+.main-content{
+  padding: 1rem;
+  height: calc(100vh - 100px);
+  overflow: auto;
+}
+
+/** Header */
+header{
+  height: 100px;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: right;
+  line-height: 100px;
+}
+
+/*! Footer */
+footer{
+  height: 100px;
+  background-color: #282828;
+
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
