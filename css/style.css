@@ -11,7 +11,6 @@ body{
   font-family: 'Montserrat', sans-serif;
   overflow: hidden;
   color: white;
-  padding-bottom: 100px;
 }
 
 .container{
@@ -31,6 +30,18 @@ a{
   color: currentColor;
 }
 
+/*! Buttons */
+button{
+  background-color: transparent;
+  padding: 10px 35px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
 /* ****************************************** */
 
 /* ****************************************** */
@@ -40,11 +51,16 @@ a{
   flex-direction: column;
   justify-content: space-between;
   min-width: 50px;
-  height: calc(100vh - 100px);
   background-color: black;
   padding: 10px;
+  color: #999;
+
+  height: calc(100vh - 100px);
 }
 
+.main-navbar img{
+  vertical-align: middle;
+}
 /*? Navbar Top */
 .small-logo{
   margin-bottom: 10px;
@@ -62,6 +78,10 @@ a{
 .navbar-icon{
   display: block;
   padding: 5px 0;
+}
+
+.navbar-icon span{
+  display: none;
 }
 
 .top-navbar img{
@@ -95,9 +115,25 @@ a{
 }
 
 /*? Navbar Bottom */
+.bottom-navbar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.download{
+  display: none;
+}
+
 .navbar-download > img{
   height: 15px;
-  margin: 20px auto;
+}
+
+.navbar-account{
+  margin-top: 15px;
+  color: white;
 }
 
 .navbar-account > img{
@@ -106,32 +142,38 @@ a{
   background-color: gray;
   border-radius: 50%;
 }
+
+.name-profile{
+  display: none;
+}
+
 /* ****************************************** */
 
 /* ****************************************** */
 /*! Main */
 main{
   background-color: #141922;
+  height: calc(100vh - 100px);
+  overflow: auto;
+  flex-grow: 1;
 }
 
 .main-content{
   padding: 1rem;
-  height: calc(100vh - 200px);
-  overflow: auto;
 
   text-align: justify;
 }
 
 /** Header */
 header{
-  height: 100px;
+  height: 80px;
   position: sticky;
   top: 0;
   left: 0;
 
   background-color: rgba(0, 0, 0, 0.5);
   text-align: right;
-  line-height: 100px;
+  line-height: 80px;
 }
 
 /* ****************************************** */
@@ -145,11 +187,6 @@ footer{
   padding: 10px;
   height: 100px;
   background-color: #282828;
-
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
 }
 
 .foot.left,
@@ -277,7 +314,7 @@ footer{
 
   /** Main Navbar */
   .d-block-tablet{
-    display: block;
+    display: inline-block;
   }
 
   .d-none-tablet{
@@ -289,6 +326,29 @@ footer{
     margin-left: -10px;
     padding-left: 10px;
   }
+
+
+  /** Top Navbar */
+  .navbar-icon span{
+    display: inline;
+  }
+
+  /** Navbar Bottom */
+  .bottom-navbar{
+    align-items: flex-start;
+  }
+
+  
+  .bottom-navbar img{
+    margin-right: 5px;
+  }
+
+  .navbar-download{
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    width: 100%;
+  }
+  
 }
 
 /* ****************************************** */
