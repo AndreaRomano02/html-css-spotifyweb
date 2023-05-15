@@ -97,7 +97,7 @@ button{
 
 /*? Playlist */
 .playlist{
-  margin: 20px 0;
+  margin-top: 15px;
 
   display: none;
 }
@@ -113,7 +113,7 @@ button{
 
 .name-playlist{
   overflow: auto;
-  height: 300px;
+  height: 100%;
 }
 
 .name-playlist li{
