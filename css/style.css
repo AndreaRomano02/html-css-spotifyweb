@@ -23,11 +23,16 @@ body{
 
 img{
   display: inline-block;
+  max-width: 100%;
 }
 
 a{
   text-decoration: none;
   color: currentColor;
+}
+
+ul{
+  list-style-type: none;
 }
 
 /*! Buttons */
@@ -176,6 +181,57 @@ header{
   line-height: 80px;
 }
 
+
+/** Navbar choice */
+.choice-navbar ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.choice-navbar li{
+  font-size: 11px;
+  flex-basis: 20vw;
+  height: 50px;
+  text-align: center;
+  color: #dadada;
+  position: relative;
+}
+
+.current-choice{
+  border: 1px solid #ADFF2F;
+  width: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/** Playlist */
+.main-playlist ul{
+  flex-wrap: wrap;
+  margin: 30px -5px;
+}
+
+.main-playlist li{
+  flex-basis: 50%;
+  padding: 5px;
+  text-align: center;
+}
+
+.name{
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.subtitle{
+  color: #999;
+}
+
+.circle-img{
+  border-radius: 50%;
+}
+
+
 /* ****************************************** */
 
 /* ****************************************** */
@@ -306,6 +362,7 @@ footer{
 
 /* ****************************************** */
 /*! RESPONSIVE */
+/*! Tablet */
 @media screen and (min-width: 768px) {
   /** Main Navbar */
   .main-navbar{
@@ -349,6 +406,41 @@ footer{
     width: 100%;
   }
   
+
+  /** Main */
+
+
+}
+
+
+/*! Laptop  */
+@media screen and (min-width: 992px) {
+  /** Navbar Choice */
+  .choice-navbar li{
+    flex-basis: 15vw;
+  }
+
+  /** Main playlist */
+  .main-playlist li{
+    flex-basis: 25%;
+  }
+
+
+}
+
+
+/*! Desktop */
+@media screen and (min-width: 1200px) {
+  /** Navbar Choice */
+  .choice-navbar li{
+    flex-basis: calc(100% / 6);
+  }
+
+   /** Main playlist */
+   .main-playlist li{
+    flex-basis: calc(100% / 6);
+  }
+
 }
 
 /* ****************************************** */
@@ -378,6 +470,10 @@ footer{
 
 .f-size-xs{
   font-size: 0.6rem;
+}
+
+.m-top-s{
+  margin-top: 10px;
 }
 
 /* ****************************************** */
